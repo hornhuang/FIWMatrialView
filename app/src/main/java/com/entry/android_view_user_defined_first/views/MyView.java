@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.entry.android_view_user_defined_first.R;
@@ -34,6 +35,7 @@ public class MyView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        Log.d("123123", "on Draw");
         // 调用父View的onDraw函数，因为View这个类帮我们实现了一些
         // 基本的而绘制功能，比如绘制背景颜色、背景图片等
         super.onDraw(canvas);
