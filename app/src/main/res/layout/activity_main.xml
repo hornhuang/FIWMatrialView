@@ -43,6 +43,7 @@
         <com.entry.android_view_user_defined_first.views.ClockView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/bg"
             app:clock_backgroundColor="@color/bg"
             app:clock_darkColor="#80ffffff"
             app:clock_lightColor="#ffffff" />
