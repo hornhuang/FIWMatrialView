@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,18 +11,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--<com.entry.android_view_user_defined_first.views.PathView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="@color/colorAccent"/>-->
-
         <com.entry.android_view_user_defined_first.views.MyView
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:text_text="hello world"
             app:text_size="20sp"
             app:text_color="@color/colorAccent"/>
-
 
         <com.entry.android_view_user_defined_first.views.MyLinearLayout
             android:layout_width="wrap_content"
@@ -47,13 +41,12 @@
         </com.entry.android_view_user_defined_first.views.MyLinearLayout>
 
         <com.entry.android_view_user_defined_first.views.ClockView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:background="#c0c0c0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:clock_backgroundColor="@color/bg"
             app:clock_darkColor="#80ffffff"
             app:clock_lightColor="#ffffff" />
 
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

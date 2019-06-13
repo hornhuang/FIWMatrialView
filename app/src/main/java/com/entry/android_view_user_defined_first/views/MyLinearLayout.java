@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.entry.android_view_user_defined_first.utils.MyLog;
+
 public class MyLinearLayout extends ViewGroup {
 
     public MyLinearLayout(Context context) {
@@ -30,24 +32,25 @@ public class MyLinearLayout extends ViewGroup {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
         measureChildren(widthMeasureSpec, heightMeasureSpec);
 
-        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
-        int width     = MeasureSpec.getSize(widthMeasureSpec);
-        int heightMode= MeasureSpec.getMode(heightMeasureSpec);
-        int height    = MeasureSpec.getSize(heightMeasureSpec);
+        final int widthMode  = MeasureSpec.getMode(widthMeasureSpec);
+        final int width      = MeasureSpec.getSize(widthMeasureSpec);
+        final int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        final int height     = MeasureSpec.getSize(heightMeasureSpec);
 
         if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST){
-            int groupWidth = getMaxWidth();
-            int groupHeight= getTotalHeight();
-
+            int groupWidth  = getMaxWidth();
+            int groupHeight = getTotalHeight();
+            MyLog.Companion.d("AT_MOST");
             setMeasuredDimension(groupWidth, groupHeight);
         }else if (widthMode == MeasureSpec.AT_MOST){
+            MyLog.Companion.d("widthMode" + heightMode + " -" + widthMode + "-- " + MeasureSpec.AT_MOST);
             setMeasuredDimension(getMaxWidth(), height);
         }else if (heightMode == MeasureSpec.AT_MOST){
             setMeasuredDimension(width, getTotalHeight());
+        }else {
+            setMeasuredDimension(width, height);
         }
     }
 

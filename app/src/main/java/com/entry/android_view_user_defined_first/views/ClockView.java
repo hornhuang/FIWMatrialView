@@ -188,7 +188,7 @@ public class ClockView extends View {
     protected void onDraw(Canvas canvas) {
         Log.i("owen", "clock onDraw start");
         mCanvas = canvas;
-//        drawOutSideArc();// 外面的圈圈
+        drawOutSideArc();// 外面的圈圈
         getCurrentTime();
         drawScaleLine();// 刻度 加 渐变色
         drawSecondNeedle();// 三个针
